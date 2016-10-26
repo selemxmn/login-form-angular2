@@ -1,0 +1,28 @@
+<div class="app-content">
+  <div class="group">
+<form>
+   <span class="app-action">
+  <button md-fab (click)="logout()"><md-icon>exit_to_app</md-icon></button>
+</span>
+<br><br>
+  <md-card>
+    <md-tab-group >
+      <md-tab  *ngFor="let sd of data">
+        <ul>
+        <i >
+        <template md-tab-label>
+          {{sd.from.name}}
+        </template>
+        <template md-tab-content><br>
+        <small>Message :</small> <p>{{sd.message}}</p>
+        </template>
+        </i>
+          </ul>
+      </md-tab>
+    </md-tab-group>
+  </md-card>
+
+</form>
+
+  </div>
+</div>

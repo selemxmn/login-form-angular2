@@ -1,0 +1,30 @@
+
+
+
+<div class="app-content">
+  <div class="group">
+    <div class="corner-ribbon top-right sticky blue">© Salem</div>
+
+    <form role="form" (submit)="login()">
+      <br>
+      <md-input type="text" required [(ngModel)]="user.username" id="username"
+                name="username" >
+        <md-placeholder>
+          <i class="material-icons app-input-icon">face</i>Username
+        </md-placeholder>
+      </md-input><br><br>
+      <md-input type="password" required [(ngModel)]="user.password" id="password"
+      name="password" >
+        <md-placeholder >
+          <i class="material-icons app-input-icon">lock_open</i>Password
+        </md-placeholder>
+      </md-input><br><br>
+      <button md-raised-button color="warn" type="submit" name="action">LOGIN</button><br><br>
+      <span id="err"><small>{{errorMsg}}</small></span>
+      <md-slide-toggle color="primary"><small>Remember me!</small></md-slide-toggle>
+    </form >
+  </div>
+</div>
+
+
+
