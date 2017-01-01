@@ -31,6 +31,6 @@ export class AuthenticateService {
 
   checkCredentials(){
     if (localStorage.getItem("user") === null){
-      this._router.navigate(['login']);
+      this._router.navigate(['/login']);
     }
   } }

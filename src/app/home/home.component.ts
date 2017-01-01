@@ -99,9 +99,9 @@ export class HomeComponent implements OnInit {
   }
 
   loadProfiles(){
-    console.log(this.data);
+    //console.log(this.data);
     for (var sd in this.data) {
-      console.log(this.data[sd]);
+      //console.log(this.data[sd]);
       var a= this.data[0];
     } }
   logout() {
