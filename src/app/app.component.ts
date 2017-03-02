@@ -7,8 +7,5 @@ import {LoginComponent} from "./login/login.component";
   entryComponents: [LoginComponent],
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  //title = 'app works!';
-
-}
+export class AppComponent { }
 

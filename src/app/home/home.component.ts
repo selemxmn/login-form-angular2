@@ -90,8 +90,7 @@ export class HomeComponent implements OnInit {
       "updated_time": "2010-08-02T21:27:44+0000"
     }
   ];
-  constructor(
-    private _service:AuthenticateService){}
+  constructor(private _service:AuthenticateService) { }
 
   ngOnInit() {
     this._service.checkCredentials();
@@ -99,12 +98,12 @@ export class HomeComponent implements OnInit {
   }
 
   loadProfiles(){
-    //console.log(this.data);
     for (var sd in this.data) {
-      //console.log(this.data[sd]);
       var a= this.data[0];
-    } }
-  logout() {
+    }
+   }
+
+  logout():void {
     this._service.logout();
   }
 }

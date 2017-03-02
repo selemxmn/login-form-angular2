@@ -10,27 +10,26 @@ var users = [
 @Injectable()
 export class AuthenticateService {
 
-  constructor(
-    private _router: Router){}
+  constructor(private _router: Router) { }
 
   logout() {
     localStorage.removeItem("user");
     this._router.navigate(['/login']);
   }
 
-  login(user){
-    var authenticatedUser = users.find(u => u.username === user.username);
+  login(user) {
+    let authenticatedUser = users.find(u => u.username === user.username);
     if (authenticatedUser && authenticatedUser.password === user.password){
-      localStorage.setItem("user", authenticatedUser);
+      localStorage.setItem("user", authenticatedUser.username);
       this._router.navigate(['/home']);
       return true;
     }
     return false;
-
   }
 
-  checkCredentials(){
+  checkCredentials() {
     if (localStorage.getItem("user") === null){
       this._router.navigate(['/login']);
     }
-  } }
+  }
+}
